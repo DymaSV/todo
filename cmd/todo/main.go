@@ -6,7 +6,7 @@ import (
 	"os"
 	"strings"
 
-	"github.com/DymaSV/todo"
+	"github.com/DymaSV/todo/proto"
 )
 
 func main() {
@@ -33,7 +33,11 @@ func main() {
 const dbPath = "mydb.pb"
 
 func add(test string) error {
-	task := &todo.Task{}
+	task := &proto.Task{
+		Text: text,
+		Done: false,
+	}
+	proto.
 	return nil
 }
 

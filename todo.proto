@@ -7,5 +7,14 @@ option go_package = "./proto";
 message Task {
     string text = 1;
     bool done = 2;
+}
 
+message TaskList {
+    repeated Task tasks = 1;
+}
+
+message Void {}
+
+service Tasks{
+    rpc List(Void) returns(TaskList){}
 }
